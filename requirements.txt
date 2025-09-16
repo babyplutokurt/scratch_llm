@@ -1,0 +1,19 @@
+# It is recommended to use a virtual environment to install these packages.
+
+# Hugging Face libraries
+transformers==4.56.1
+datasets
+accelerate
+huggingface_hub
+# TRL for SFT and DPO
+trl==0.11.4
+
+# For efficient training
+flash-attn
+
+# For data handling
+pyarrow
+
+# For logging and monitoring
+tensorboard
+wandb
