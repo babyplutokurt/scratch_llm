@@ -1,4 +1,4 @@
-# scratch_llm
+# scratch_llm: Train your llm from scratch
 
 This project aims to train a small Large Language Model (LLM) from scratch, following the principles and techniques demonstrated in the `mini_qwen` project. The training process is divided into three main stages:
 
