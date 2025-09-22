@@ -8,7 +8,7 @@
 export TOKENIZERS_PARALLELISM=false
 
 echo "--- Starting Pre-training Data Preprocessing ---"
-python src/preprocess_pt.py --num_proc 32
+python src/preprocess_pt.py --num_proc 64
 
 # echo "--- Starting SFT Data Preprocessing (Placeholder for future) ---"
 # python src/preprocess_sft.py --num_proc 32

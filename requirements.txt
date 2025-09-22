@@ -17,3 +17,6 @@ pyarrow
 # For logging and monitoring
 tensorboard
 wandb
+
+#
+accelerate

@@ -45,16 +45,16 @@ declare -a all_pt_dirs=(
 # Loop and download each directory individually to avoid issues with multiple --include flags.
 for dir in "${all_pt_dirs[@]}"; do
     echo "Downloading files from $dir..."
-    hf download "$PT_REPO" --repo-type dataset --local-dir "$PT_TARGET_DIR" --local-dir-use-symlinks False \
+    hf download "$PT_REPO" --repo-type dataset --local-dir "$PT_TARGET_DIR" \
         --include "$dir/*.parquet"
 done
 
 # --- 2. Supervised Fine-Tuning data: Infinity-Instruct ---
 echo "Downloading the Infinity-Instruct dataset..."
-hf download BAAI/Infinity-Instruct --repo-type dataset --local-dir "$DATA_DIR/Infinity-Instruct" --local-dir-use-symlinks False
+hf download BAAI/Infinity-Instruct --repo-type dataset --local-dir "$DATA_DIR/Infinity-Instruct"
 
 # --- 3. Direct Preference Optimization data: Infinity-Preference ---
 echo "Downloading the Infinity-Preference dataset..."
-hf download BAAI/Infinity-Preference --repo-type dataset --local-dir "$DATA_DIR/Infinity-Preference" --local-dir-use-symlinks False
+hf download BAAI/Infinity-Preference --repo-type dataset --local-dir "$DATA_DIR/Infinity-Preference"
 
 echo "All datasets have been downloaded into the $DATA_DIR directory."
